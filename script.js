@@ -28,11 +28,18 @@ function generatePassword(params) {
   if (numbers) {
     selectedFunctions.push(generateNumbers)
   }
+  if (numbers > 8 ) {
+    count --;
+  }
+  if (numbers < 125 ) {
+    count ++;
+  }
   if (specialCharacters) {
     selectedFunctions.push(generateCharacters)
+    document.body.appendChild(writePassword);
   }
-  for (let index = 0; index < passwordLength; index++) {
-    const element = array[index];
+  for (var index = 0; index < passwordLength; index++) {
+    console.log(array[index]);
 
   }
 }
@@ -48,5 +55,6 @@ function generateNumbers(params) {
 function generateSpecialCharacters(params) {
   return symbol[Math.floor(Math.random()*symbol.length)];
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
