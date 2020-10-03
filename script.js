@@ -1,5 +1,4 @@
 var generateBtn = document.querySelector("#generate");
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var symbols = ["!", "@", "#", "$", "%", "^", "*", "(", ")", "_", "+"]
 
 // Write password to the #password input
@@ -36,6 +35,7 @@ function writePassword() {
 }
 
 function generatePassword() {
+  return generateLowerCase + generateUpperCase + generateNumbers + generateSpecialCharacters;
 }
 
 function generateLowerCase(_params) {
