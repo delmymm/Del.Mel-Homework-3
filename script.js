@@ -5,10 +5,6 @@ var symbols = ["!", "@", "#", "$", "%", "^", "*", "(", ")", "_", "+"]
 function writePassword() {
   var passwordLength = prompt("How many characters do you want your password to contain?");
   if (passwordLength < 8 ) {
-    alert("Need more characters!")
-  }
-  if (passwordLength > 125 ) {
-    alert("Exceeded character length!")
   }
   var specialCharacters = confirm("Click OK to confirm special characters");
   if (specialCharacters) {
